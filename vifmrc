@@ -377,6 +377,9 @@ nnoremap io :e<cr>
 " Open dir in editornnoremap
 nnoremap ii :e .<cr>
 
+" Open dir in nvim
+nnoremap iI :!nvim .<cr>
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 
@@ -407,7 +410,7 @@ nnoremap <space> :!qlmanage -p %f > /dev/null 2>&1<cr>
 " Mappings for faster renaming
 nnoremap I cw<c-a>
 nnoremap cc cw<c-u>
-nnoremap A cw
+nnoremap A cW
 
 " As above, but without the file extension
 " nnoremap I cW<c-a>
@@ -468,3 +471,7 @@ nnoremap <c-u> <c-w>x
 " ------------------------------------------------------------------------------
 
 " https://github.com/cirala/vifm_devicons
+
+nnoremap T :shell<cr>
+nnoremap cd :cd <c-x><c-x>d
+nnoremap cD :cd<space>
