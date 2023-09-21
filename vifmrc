@@ -473,5 +473,5 @@ nnoremap <c-u> <c-w>x
 " https://github.com/cirala/vifm_devicons
 
 nnoremap T :shell<cr>
-nnoremap cd :cd <c-x><c-x>d
+nnoremap cd :cd <c-x>d
 nnoremap cD :cd<space>
