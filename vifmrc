@@ -114,8 +114,17 @@ colorscheme Default-256 Default
 
 " :mark mark /full/directory/path [filename]
 
-mark b ~/bin/
+mark b /bin/
 mark h ~/
+mark H /opt/homebrew/
+mark g ~/github/
+mark c ~/.config/
+mark Q ~/.local/state/nvim/swap/
+
+" bmark ~/github/ Dest
+
+nnoremap ~ :bmark<space>
+nnoremap ` :bmarks<cr>
 
 " ------------------------------------------------------------------------------
 " Commands
@@ -371,14 +380,17 @@ filetype * open
 " Set qq to exit
 nnoremap qq :q<cr>
 
-" Open file in editor
+" Open file in nvim
 nnoremap io :e<cr>
 
 " Open dir in editornnoremap
 nnoremap ii :e .<cr>
 
-" Open dir in nvim
+" Open dir in nvim terminal
 nnoremap iI :!nvim .<cr>
+
+" Open dir in VS Code
+nnoremap iu :!code .<cr>
 
 " Start shell in current directory
 nnoremap s :shell<cr>
@@ -475,3 +487,7 @@ nnoremap <c-u> <c-w>x
 nnoremap T :shell<cr>
 nnoremap cd :cd <c-x>d
 nnoremap cD :cd<space>
+
+nnoremap i <Nop>
+
+nnoremap aa :!mkdir<space>
