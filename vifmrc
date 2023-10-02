@@ -493,3 +493,4 @@ nnoremap i <Nop>
 nnoremap aa :!mkdir<space>
 
 nnoremap git :!lazygit<cr>
+nnoremap af :!touch<space>
