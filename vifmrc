@@ -491,3 +491,5 @@ nnoremap cD :cd<space>
 nnoremap i <Nop>
 
 nnoremap aa :!mkdir<space>
+
+nnoremap git :!lazygit<cr>
