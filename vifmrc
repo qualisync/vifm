@@ -1,4 +1,5 @@
-" vim: filetype=vifm :
+
+q" vim: filetype=vifm :
 " Sample configuration file for vifm on OSX (last updated: 2 April, 2023)
 " You can edit this file by hand.
 " The " character at the beginning of a line comments out the line.
@@ -484,7 +485,7 @@ nnoremap <c-u> <c-w>x
 
 " https://github.com/cirala/vifm_devicons
 
-nnoremap T :shell<cr>
+nnoremap <C-d> :shell<cr>
 nnoremap cd :cd <c-x>d
 nnoremap cD :cd<space>
 
@@ -494,3 +495,5 @@ nnoremap aa :!mkdir<space>
 
 nnoremap git :!lazygit<cr>
 nnoremap af :!touch<space>
+
+nnoremap tx :!tmux new-window 
