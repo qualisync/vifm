@@ -496,4 +496,8 @@ nnoremap aa :!mkdir<space>
 nnoremap git :!lazygit<cr>
 nnoremap af :!touch<space>
 
-nnoremap tx :!tmux new-window 
+nnoremap tx :!tmux new-window<cr>
+nnoremap tX :!tmux new-window -n " 
+
+nnoremap txh :!tmux split-window -h<cr>
+nnoremap txv :!tmux split-window -v<cr>
