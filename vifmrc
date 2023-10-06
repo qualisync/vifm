@@ -506,5 +506,5 @@ nnoremap af :!touch<space>
 nnoremap tx :!tmux new-window<cr>
 nnoremap tX :!tmux new-window -n " 
 
-nnoremap txh :!tmux split-window -h<cr>
-nnoremap txv :!tmux split-window -v<cr>
+nnoremap th :!tmux split-window -h<cr>
+nnoremap tv :!tmux split-window -v<cr>
