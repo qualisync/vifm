@@ -382,7 +382,10 @@ filetype * open
 nnoremap qq :q<cr>
 
 " Open file in nvim
-nnoremap io :e<cr>
+nnoremap iO :e<cr>
+
+" Open file in nvim terminal
+nnoremap io :!nvim %f<cr>
 
 " Open dir in editornnoremap
 nnoremap ii :e .<cr>
@@ -392,6 +395,9 @@ nnoremap iI :!nvim .<cr>
 
 " Open dir in VS Code
 nnoremap iu :!code .<cr>
+
+" Open file in VS Code
+nnoremap iU :!code %f<cr>
 
 " Start shell in current directory
 nnoremap s :shell<cr>
@@ -490,6 +496,7 @@ nnoremap cd :cd <c-x>d
 nnoremap cD :cd<space>
 
 nnoremap i <Nop>
+nnoremap t <Nop>
 
 nnoremap aa :!mkdir<space>
 
