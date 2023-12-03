@@ -510,16 +510,23 @@ nnoremap th :!tmux split-window -h<cr>
 nnoremap tv :!tmux split-window -v<cr>
 
 command! FZFfindfile : set noquickview
-                \| let $FZF_PICK = term('fzf-tmux -p 70%% 2>/dev/tty')
+                \| let $FZF_PICK = term('fzf-tmux -p 100%% 2>/dev/tty')
+                \| if $FZF_PICK != ''
+                \|     execute 'goto' fnameescape($FZF_PICK)
+                \| endif
+
+command! FZFfinddir : set noquickview
+                \| let $FZF_PICK = term('find . -type d -maxdepth 1 | fzf-tmux -p 100%% 2>/dev/tty')
                 \| if $FZF_PICK != ''
                 \|     execute 'goto' fnameescape($FZF_PICK)
                 \| endif
 
 command! FZFlocate : set noquickview
-                  \| let $FZF_PICK = term('find ~ -type d -maxdepth 2 | fzf-tmux -p 70%% 2>/dev/tty')
+                  \| let $FZF_PICK = term('find ~ -type d -maxdepth 2 | fzf-tmux -p 100%% 2>/dev/tty')
                   \| if $FZF_PICK != ''
                   \|     execute 'goto' fnameescape($FZF_PICK)
                   \| endif                 \| endif
 
 nnoremap <c-g> :FZFlocate<cr>
 nnoremap <c-f> :FZFfindfile<cr>
+nnoremap <c-d> :FZFfinddir<cr>
