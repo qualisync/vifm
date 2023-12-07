@@ -500,7 +500,9 @@ nnoremap t <Nop>
 
 nnoremap aa :!mkdir<space>
 
-nnoremap git :!lazygit<cr>
+command! LazyGitPopup !tmux popup -h 100%% -w 100%% -E "lazygit -p %d"
+
+nnoremap git :LazyGitPopup<cr>
 nnoremap af :!touch<space>
 
 nnoremap tx :!tmux new-window<cr>
