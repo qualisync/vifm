@@ -1,4 +1,6 @@
 
+
+
 " vim: filetype=vifm :
 " Sample configuration file for vifm on OSX (last updated: 2 April, 2023)
 " You can edit this file by hand.
@@ -385,10 +387,10 @@ nnoremap qq :q<cr>
 nnoremap iO :e<cr>
 
 " Open file in nvim terminal
-nnoremap io :!nvim %f<cr>
+nnoremap io :!tmux popup -h 100%% -w 100%% -E "nvim %d/%f"<cr>
 
 " Open dir in editornnoremap
-nnoremap ii :e .<cr>
+nnoremap ii :!tmux run "neovide %d"<cr>
 
 " Open dir in nvim terminal
 nnoremap iI :!nvim .<cr>
