@@ -532,7 +532,7 @@ command! FZFfinddir : set noquickview
                 \| endif
 
 command! FZFlocate : set noquickview
-                  \| let $FZF_PICK = term('find ~ -type d -maxdepth 2 ! -readable -prune -o -print | fzf-tmux -p 100%% 2>/dev/tty')
+                  \| let $FZF_PICK = term('find ~ -type d -maxdepth 2 ! -exec test -r {} \; -prune -o -print 2>/dev/null | fzf-tmux -p 100%% 2>/dev/tty')
                   \| if $FZF_PICK != ''
                   \|     execute 'cd' fnameescape($FZF_PICK)
                   \| endif
