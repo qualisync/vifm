@@ -507,11 +507,13 @@ command! LazyGitPopup !tmux popup -h 100%% -w 100%% -E "lazygit -p %d"
 nnoremap git :LazyGitPopup<cr>
 nnoremap af :!touch<space>
 
-nnoremap tx :!tmux new-window<cr>
-nnoremap tX :!tmux new-window -n " 
+nnoremap tc :!tmux new-window<cr>
+nnoremap tC :!tmux new-window -n " 
 
 nnoremap th :!tmux split-window -h<cr>
 nnoremap tv :!tmux split-window -v<cr>
+nnoremap tp :!tmux popup -h 100%% -w 100%% -E "zsh -c 'cd %d && zsh'"<CR>
+
 
 command! FZFfindall : set noquickview
                 \| let $FZF_PICK = term('fzf-tmux -p 100%% 2>/dev/tty')
